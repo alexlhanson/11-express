@@ -4,7 +4,12 @@
   "description": "Basic express server",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "watch": "nodemon index.js",
+    "test": "jest --watchAll"
+  },
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/"
   },
   "repository": {
     "type": "git",
@@ -17,10 +22,11 @@
   },
   "homepage": "https://github.com/alexlhanson/11-express#readme",
   "dependencies": {
-    "babel-core": "^6.26.3",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "babel-register": "^6.26.0",
     "dotenv": "^6.0.0",
     "jest": "^23.6.0",
     "supertest": "^3.3.0"
