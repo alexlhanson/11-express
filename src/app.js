@@ -8,6 +8,15 @@ let app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
+//router access
+import houseRouter from './lib/api/houseRouter';
+app.use(houseRouter);
+
+//catch-all route
+app.use('/*', (req, res) =>{
+  res.status(400).end();
+});
+
 //listening and running server
 let isRunning = false;
 
