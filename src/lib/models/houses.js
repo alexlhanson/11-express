@@ -19,3 +19,5 @@ class Houses {
     return storage.fetchOne(id);
   }
 }
+
+export default Houses;

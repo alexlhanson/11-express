@@ -4,13 +4,13 @@ import express from 'express';
 
 let app = express();
 
-//middleware use
+//parsing middleware
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 //router access
-import houseRouter from './lib/api/houseRouter';
-app.use(houseRouter);
+import router from './lib/api/houseRouter';
+app.use(router);
 
 //catch-all route
 app.use('/*', (req, res) =>{

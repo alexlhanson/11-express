@@ -10,7 +10,8 @@ let sendJSON = (res, data) => {
   res.status(200).json(data);
 };
 
-router.post('api/v1/houses', (res, req) => {
+router.post('/api/v1/houses', (req, res) => {
+  console.log(req);
   let house = new Houses(req.body.address, req.body.description, req.body.sqFootage);
 
   house.save()
