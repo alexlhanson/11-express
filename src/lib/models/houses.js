@@ -1,6 +1,6 @@
 'use strict';
 
-import storage from '../lib/storage/memory.js';
+import storage from '../storage/memory';
 import uuid from 'uuid/v1';
 
 class Houses {

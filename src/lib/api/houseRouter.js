@@ -4,7 +4,7 @@ import express from 'express';
 
 const router = express.Router();
 
-import Houses from '..models/houses';
+import Houses from '../models/houses';
 
 let sendJSON = (res, data) => {
   res.status(200).json(data);

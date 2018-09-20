@@ -5,6 +5,6 @@ require('babel-register');
 
 console.log(`Process running with id: ${process.pid}`);
 
-require('./app.js').start(process.env.PORT);
+require('./src/app').start(process.env.PORT);
 
 
