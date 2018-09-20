@@ -1,0 +1,28 @@
+{
+  "name": "11-express",
+  "version": "1.0.0",
+  "description": "Basic express server",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexlhanson/11-express.git"
+  },
+  "author": "Alex Hanson <alexlhanson@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexlhanson/11-express/issues"
+  },
+  "homepage": "https://github.com/alexlhanson/11-express#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "dotenv": "^6.0.0",
+    "jest": "^23.6.0",
+    "supertest": "^3.3.0"
+  }
+}
