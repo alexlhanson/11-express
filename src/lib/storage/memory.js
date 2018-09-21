@@ -1,10 +1,10 @@
 'use strict';
 
-export const storage = {};
-export const database = {};
+const storage = {};
+const database = {};
 
 storage.save = (data) => {
-
+  
   return new Promise ((resolve, reject) =>{
     if (data.id) {
       database[data.id] = data;
@@ -14,7 +14,7 @@ storage.save = (data) => {
 };
 
 storage.fetchOne = (id) => {
-
+  
   return new Promise ((resolve, reject) => {
     if (!database[id]) {reject(`Error: ${id} not found`);}
     resolve(database[id]);
@@ -22,7 +22,7 @@ storage.fetchOne = (id) => {
 };
 
 storage.delete = (id) => {
-
+  
   return new Promise((resolve, reject) => {
     if (!database[id]) {reject(`${id} not found`);} 
     else {  
@@ -31,5 +31,7 @@ storage.delete = (id) => {
     }
   });
 };
+
+export default storage;
 
 

@@ -4,8 +4,6 @@ const storage = {};
 const databaseDir = `${__dirname}/data`;
 import fs from 'fs';
 
-
-
 storage.save = data => {
   return new Promise((resolve, reject) => {
     if (!data.id) {
@@ -35,7 +33,8 @@ storage.fetchOne = id => {
   });
 };
 
-storage.delete = (res, id) => {
+storage.delete = (id, res) => {
+  console.log('and here');
   return new Promise((resolve, reject) => {
     if (!id) {reject('ERROR: no id provided in data');
     }
@@ -44,7 +43,7 @@ storage.delete = (res, id) => {
 
     fs.unlink(file, (err) => {
       if (err) reject(err);
-      resolve(res);
+      resolve('success');
     });
   });
 };

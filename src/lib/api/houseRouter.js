@@ -28,17 +28,15 @@ router.get('/api/v1/houses', (req, res) => {
 router.delete('/api/v1/houses', (req, res) => {
 
   if (!req.query.id) {
-    res.statusCode = '404';
+    res.statusCode = '400';
     res.write(`TypeError: cannot delete resource of blank id`);
     res.end();
   } else {
     Houses.delete(req.query.id)
-      .then(res => {
-        res.statusCode = '200';
+      .then(msg => {
+        res.status(200);
         res.statusMessage = 'DELETE SUCCESSFUL';
-        // res.setHeader('Content-type', 'application/json');
-        res.write('');
-        res.end();
+        res.send(msg);
       })
       .catch(console.error);
   }

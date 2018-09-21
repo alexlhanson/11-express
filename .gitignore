@@ -4,7 +4,6 @@ db
 temp
 build
 package-lock.json
-.babelrc
 .vscode/
 
 # Created by https://www.gitignore.io/api/vim,osx,node,linux,windows
