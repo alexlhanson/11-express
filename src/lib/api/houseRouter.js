@@ -2,7 +2,7 @@
 
 import express from 'express';
 
-const router = express.Router();
+const houseRouter = express.Router();
 
 import Houses from '../models/houses';
 
@@ -42,4 +42,4 @@ router.delete('/api/v1/houses', (req, res) => {
   }
 });
 
-export default router;
+export default houseRouter;

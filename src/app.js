@@ -1,16 +1,21 @@
 'use strict';
+const debug = require('debug')('app');
 
 import express from 'express';
+import morgan from 'morgan';
+import cors from 'cors';
 
 let app = express();
 
 //parsing middleware
+app.use(cors());
+app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 //router access
-import router from './lib/api/houseRouter';
-app.use(router);
+import houseRouter from './lib/api/houseRouter';
+app.use(houseRouter);
 
 //catch-all route
 app.use('/*', (req, res) =>{
