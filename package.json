@@ -1,0 +1,44 @@
+{
+  "name": "11-express",
+  "version": "1.0.0",
+  "description": "Basic express server",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon index.js",
+    "test": "jest --watchAll"
+  },
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexlhanson/11-express.git"
+  },
+  "author": "Alex Hanson <alexlhanson@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexlhanson/11-express/issues"
+  },
+  "homepage": "https://github.com/alexlhanson/11-express#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "babel-plugin-react-constant-elements": "^1.0.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators": "^6.24.1",
+    "babel-plugin-transform-react-constant-elements": "^6.23.0",
+    "babel-plugin-transform-react-inline-elements": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "debug": "^4.0.1",
+    "dotenv": "^6.0.0",
+    "eslint": "^5.6.0",
+    "jest": "^23.6.0",
+    "supertest": "^3.3.0"
+  }
+}
