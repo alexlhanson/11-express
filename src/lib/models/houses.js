@@ -1,6 +1,6 @@
 'use strict';
 
-import storage from '../storage/memory';
+import storage from '../storage/data-store';
 import uuid from 'uuid/v1';
 
 class Houses {
@@ -15,8 +15,13 @@ class Houses {
     return storage.save(this);
   }
 
-  get(id) {
+  static get(id) {
     return storage.fetchOne(id);
+  }
+
+  static delete(id) {
+    console.log('here');
+    return storage.delete(id);
   }
 }
 

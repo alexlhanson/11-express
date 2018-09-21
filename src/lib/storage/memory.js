@@ -1,7 +1,7 @@
 'use strict';
 
-const storage = {};
-const database = {};
+export const storage = {};
+export const database = {};
 
 storage.save = (data) => {
 
@@ -13,4 +13,23 @@ storage.save = (data) => {
   });
 };
 
-export default storage;
+storage.fetchOne = (id) => {
+
+  return new Promise ((resolve, reject) => {
+    if (!database[id]) {reject(`Error: ${id} not found`);}
+    resolve(database[id]);
+  });
+};
+
+storage.delete = (id) => {
+
+  return new Promise((resolve, reject) => {
+    if (!database[id]) {reject(`${id} not found`);} 
+    else {  
+      delete database[id];
+      resolve(`resource: ${id} has been deleted`);
+    }
+  });
+};
+
+
