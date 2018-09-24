@@ -20,7 +20,6 @@ class Houses {
   }
 
   static delete(id) {
-    console.log('here');
     return storage.delete(id);
   }
 }

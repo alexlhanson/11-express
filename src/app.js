@@ -20,7 +20,7 @@ app.use(houseRouter);
 //catch-all route
 app.use('/*', (req, res) =>{
   console.log('catchall');
-  console.log(req.query.id);
+  console.log(req.params.id);
   res.status(400).end();
 });
 
